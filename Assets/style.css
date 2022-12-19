@@ -37,11 +37,34 @@ body {
   padding: 10px;
 }
 
+.questionTitle {
+  font-size: 20px;
+}
+
 .button {
   background-color:  rgb(80, 11, 145);
   color: white;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 15%;
-  
+  margin: 6px 2px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15%;  
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  /* background: rgb(194, 193, 196); */
+  background-color: #008CBA;
+  color: darkred;
+  position: relative;
+  left: 2px;
+  bottom: 3px;
+  transition-duration: 0.4s;
+  text-decoration: underline;
+}
+
+.answerChoices {
+  list-style-type: lower-alpha;
 }
