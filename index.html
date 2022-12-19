@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Quiz WebDiv IE</title>
+  <!-- <link rel="stylesheet" href="./Assets/reset.css"> -->
   <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
+  <header class="header">
+     <!-- top for highscore link and timer -->
+    <section class="row">
+      <div class="text-left">
+        <a href="#" class="viewHighScore">View High-Scores</a>
+      </div>
+      <div class="timer text-right">
+        Time: <span class="timeLeft">0</span>
+      </div>
+      <div class="timesUp" style="display: none;">Time's Up!</div>
+    </section>
+  </header>
+  <!-- main content -->
+  <!--start screen  -->
+
+  <main class="main everything">
   
+
+      <section class="start">
+        <h1 class="quizTitle">!!Coding Quiz!!</h1>
+        <br>
+        <p class="intro">Let's test your knowledge on Front-end development fundamentals! Try to answer the followding
+          code-related questions within the time limit. Please, Keep in mind that incorrect answers will penalize your
+          time by ten seconds!</p>
+          <br>
+        <button class="start-quiz-button align-center" type="button">Start Quiz</button>
+      </section>
+      <!--quiz section  -->
+      <section class="questionSection">
+        <p class="questionTitle">Question</p>
+        <ol class="answerChoices">
+          <li><button class="btn0 button">Choice1</button></li>
+          <li><button class="btn1 button">Choice2</button></li>
+          <li><button class="btn2 button">Choice3</button></li>
+          <li><button class="btn3 button">Choice4</button></li>
+          <hr class="lineBreak" style="display: none">
+          <p class="answerCheck" style="display: none;"></p>
+    </div>
+    </section>
+
+    <!-- score div -->
+    <div class="summary" style="display: none;">
+      <div class=""></div>
+      <div class="">
+        <h2 class="">Your final score is <span class="finalScore"></span> !</h2>
+        <form>
+          <p class="">Enter your initials: <input class="initialInput" type="text">
+            <button type="submit" class="submitInitialBtn">Submit</button>
+          </p>
+        </form>
+      </div>
+      <div class=""></div>
+    </div>
+
+    <!-- highscores section -->
+    <section class="highScoreSection" style="display: none;">
+      <h2 class="">High Scores</h2>
+
+      <div class="listOfHighScores"></div>
+
+      <!-- append each highscore as new paragraph here -->
+      <p>
+        <button type="submit" class="goBackBtn">Go Back</button>
+        <button type="submit" class="clearHighScoreBtn">Clear High Scores</button>
+      </p>
+
+    </section>
+    
+
+  </main>
   <script src="./Assets/script.js"></script>
 </body>
+
 </html>
