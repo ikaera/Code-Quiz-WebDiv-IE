@@ -5,15 +5,17 @@
 }
 
 body {
-  /* margin: 25px; */
-  background-color: #f2f2f2; 
-  
+  margin: 25px;
+  background-color: #f2f2f2;
+
 }
 
 .main {
-  background-color: rgb(139, 235, 203);;
+  background-color: rgb(140, 211, 240);
+  ;
   /* margin: 10px; */
   padding: 15px;
+  /* margin: 10px; */
 }
 
 .text-left {
@@ -23,12 +25,18 @@ body {
 }
 
 .text-right {
- float: right;
- margin-top: 10px;
+  float: right;
+  margin-top: 10px;
   margin-right: 10px;
 }
 
-.start, .questionSection {
+.start,
+.questionSection,
+.answerChoices,
+.summary,
+.summary-title,
+.summary-form .highScoreSection,
+.listOfHighScores {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,19 +45,60 @@ body {
   padding: 10px;
 }
 
+.high-score-Heading {
+  text-align: center;
+}
+
+.high-scores-btns {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  align-content: ;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.goBackBtn,
+.clearHighScoreBtn {
+  margin: 6px 6px;
+  padding: 4px 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+}
+
+.goBackBtn:hover,
+.clearHighScoreBtn:hover {
+  /* background: rgb(194, 193, 196); */
+  background-color: #008CBA;
+  color: white;
+  /* color: darkred; */
+  /* position: relative;
+  left: 2px;
+  bottom: 3px; */
+  transition-duration: 0.4s;
+  text-decoration: solid;
+  font-weight: bolder;
+}
+
 .questionTitle {
-  font-size: 20px;
+  font-size: 35px;
+  text-align: center;
 }
 
 .button {
-  background-color:  rgb(80, 11, 145);
-  color: white;
+  background-color: rgb(182, 130, 231);
+  color: black;
   margin: 6px 2px;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  border-radius: 15%;  
+  border-radius: 15%;
   border: none;
   cursor: pointer;
 }
@@ -57,14 +106,16 @@ body {
 .button:hover {
   /* background: rgb(194, 193, 196); */
   background-color: #008CBA;
-  color: darkred;
-  position: relative;
+  color: white;
+  /* color: darkred; */
+  /* position: relative;
   left: 2px;
-  bottom: 3px;
+  bottom: 3px; */
   transition-duration: 0.4s;
-  text-decoration: underline;
+  text-decoration: solid;
+  font-weight: bolder;
 }
 
 .answerChoices {
-  list-style-type: lower-alpha;
+  list-style-type: none;
 }
