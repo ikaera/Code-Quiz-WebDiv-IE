@@ -33,7 +33,7 @@ let questions = [
     },
     {
         question: "To see if two variables are equal in an if / else statement you would use ____.",
-        choices: ["a. =", "b. ==", "c. 'equals'", "d. !="],
+        choices: ["a. '='", "b. '=='", "c. 'equals'", "d. '!='"],
         answer: "b. =="
     },
     {
