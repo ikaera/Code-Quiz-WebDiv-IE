@@ -64,33 +64,33 @@ let questions = [
 ];
 
 // grab references to elements
-let timer = document.querySelector(".timer");
-let timeLeft = document.querySelector(".timeLeft");
-let timesUp = document.querySelector(".timesUp");
+const timer = document.querySelector(".timer");
+const timeLeft = document.querySelector(".timeLeft");
+const timesUp = document.querySelector(".timesUp");
 
-let startDiv = document.querySelector(".start");
-let startQuizBtn = document.querySelector(".start-quiz-button");
+const startDiv = document.querySelector(".start");
+const startQuizBtn = document.querySelector(".start-quiz-button");
 
-let questionDiv = document.querySelector(".questionSection");
-let questionTitle = document.querySelector(".questionTitle");
-let choiceA = document.querySelector(".btn0");
-let choiceB = document.querySelector(".btn1");
-let choiceC = document.querySelector(".btn2");
-let choiceD = document.querySelector(".btn3");
-let answerCheck = document.querySelector(".answerCheck");
+const questionDiv = document.querySelector(".questionSection");
+const questionTitle = document.querySelector(".questionTitle");
+const choiceA = document.querySelector(".btn0");
+const choiceB = document.querySelector(".btn1");
+const choiceC = document.querySelector(".btn2");
+const choiceD = document.querySelector(".btn3");
+const answerCheck = document.querySelector(".answerCheck");
 
-let summary = document.querySelector(".summary");
-let submitInitialBtn = document.querySelector(".submitInitialBtn");
-let initialInput = document.querySelector(".initialInput");
-// let everything = document.querySelector("everything");
+const summary = document.querySelector(".summary");
+const submitInitialBtn = document.querySelector(".submitInitialBtn");
+const initialInput = document.querySelector(".initialInput");
+// const everything = document.querySelector("everything");
 
-let highScoreSection = document.querySelector(".highScoreSection");
-let finalScore = document.querySelector(".finalScore");
+const highScoreSection = document.querySelector(".highScoreSection");
+const finalScore = document.querySelector(".finalScore");
 
-let goBackBtn = document.querySelector(".goBackBtn");
-let clearHighScoreBtn = document.querySelector(".clearHighScoreBtn");
-let viewHighScore = document.querySelector(".viewHighScore");
-let listOfHighScores = document.querySelector(".listOfHighScores");
+const goBackBtn = document.querySelector(".goBackBtn");
+const clearHighScoreBtn = document.querySelector(".clearHighScoreBtn");
+const viewHighScore = document.querySelector(".viewHighScore");
+const listOfHighScores = document.querySelector(".listOfHighScores");
 
 // define other variables
 let correctAns = 0;
@@ -102,11 +102,11 @@ let questionIndex = 0;
 * FUNCTIONS
 */
 
-// WHEN I click the start button, timer starts
-let totalTime = 151;
+// WHEN I click the startQuiz button, timer starts
+let totalTime;
 function newQuiz() {
     questionIndex = 0;
-    totalTime = 150;
+    totalTime = 60;
     timeLeft.textContent = totalTime;
     initialInput.textContent = "";
 
@@ -129,8 +129,6 @@ function newQuiz() {
     showQuiz();
 };
 
-// console.log(questions[questionIndex].question);
-// console.log(questions[questionIndex].choices);
 
 // then presented with questions and choices
 function showQuiz() {
@@ -184,11 +182,12 @@ function chooseD() { checkAnswer(3); }
 
 // when all questions are answered or timer reaches 0, game over
 function gameOver() {
-    summary.style.display = "block";
+    summary.style.display = "flex";
     questionDiv.style.display = "none";
     startDiv.style.display = "none";
     timer.style.display = "none";
-    timesUp.style.display = "block";
+    timesUp.style.display = "flex";
+    answerCheck.textContent = '';
 
     // show final score
     finalScore.textContent = correctAns;
@@ -227,6 +226,11 @@ function storeHighScores(event) {
 
     console.log(userScore);
     scoresArray.push(userScore);
+    scoresArray.sort((a, b) => {
+        if (a.score > b.score) {
+            return -1;
+        } else { return 1 }
+    });
 
     // stringify array in order to store in local
     let scoresArrayString = JSON.stringify(scoresArray);
