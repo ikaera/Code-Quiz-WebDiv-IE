@@ -226,6 +226,7 @@ function storeHighScores(event) {
 
     console.log(userScore);
     scoresArray.push(userScore);
+    //used Tutor's help to sort the scores.
     scoresArray.sort((a, b) => {
         if (a.score > b.score) {
             return -1;
