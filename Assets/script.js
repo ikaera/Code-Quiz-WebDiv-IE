@@ -230,7 +230,7 @@ function storeHighScores(event) {
     scoresArray.sort((a, b) => {
         if (a.score > b.score) {
             return -1;
-        } else { return 1 }
+        } else return 1;
     });
 
     // stringify array in order to store in local
