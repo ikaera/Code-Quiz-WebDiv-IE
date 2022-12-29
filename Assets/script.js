@@ -111,7 +111,7 @@ function newQuiz() {
     initialInput.textContent = "";
 
     startDiv.style.display = "none";
-    questionDiv.style.display = "block";
+    questionDiv.style.display = "flex";
     timer.style.display = "block";
     timesUp.style.display = "none";
 

@@ -53,10 +53,12 @@ h2 {
 
 .quizTitle {
   font-size: 3rem;
+  align-self:center;
+  color: var(--color-primary-darker)
 }
 
 .intro {
-  font-size: 1.5rem
+  font-size: 1.5rem;  
 }
 
 .start,
@@ -67,10 +69,22 @@ h2 {
 .summary-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:flex-start;
   justify-content: left;
+  justify-items: flex-start;
   margin: 2rem;
   padding: 2rem;
+}
+
+.quizTitle {
+  font-size: 3rem;
+}
+
+.questionTitle {
+  font-size: 2rem;
+  /* text-align: center; */
+  margin-left: 2rem;
+  padding-left: 2rem;
 }
 
 .high-score-Heading {
@@ -99,7 +113,9 @@ h2 {
 
 .questionTitle {
   font-size: 2rem;
-  text-align: center;
+  /* text-align: center; */
+  margin-left: 2rem;
+  padding-left: 2rem;
 }
 
 .button {

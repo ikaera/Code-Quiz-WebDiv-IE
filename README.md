@@ -36,6 +36,7 @@ This is a timed coding quiz with multiple-choice questions. This app is written 
     * HTML
     * CSS
     * JavaScript
+    * DOM
 
 ## Usage
 
