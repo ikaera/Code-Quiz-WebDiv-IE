@@ -43,7 +43,7 @@ This is a timed coding quiz with multiple-choice questions. This app is written 
   
 ![1](./Assets/Images/Screenshot11.png)
 ![2](./Assets/Images/Screenshot22.png)
-![](./Assets/Images/Code%20Quiz%20WebDiv%20IE.webm)
+
 
 ## Websites
  - Link to the deployed Application at live URL:
